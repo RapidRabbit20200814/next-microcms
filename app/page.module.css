@@ -46,7 +46,7 @@
 .newsTitle {
   font-size: 1.5rem;
 }
-.newsLink {
+.newsList {
   position: absolute;
   right: -40px;
   bottom: -40px;
@@ -88,7 +88,7 @@
     width: calc(100% - 32px);
     padding: 16px 24px;
   }
-  .newsLink {
+  .newsList {
     position: relative;
     right: auto;
     bottom: auto;

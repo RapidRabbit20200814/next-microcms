@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getNewsList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIST } from "@/app/_constants";
 import ModuleButtonLink from "@/app/_components/ButtonLink";
-import ModuleNewsLink from "@/app/_components/NewsLink";
+import ModuleNewsList from "@/app/_components/NewsList";
 
 export default async function Home() {
   const data = await getNewsList({ limit: TOP_NEWS_LIST });
@@ -19,8 +19,8 @@ export default async function Home() {
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
-        <ModuleNewsLink news={data.contents} />
-        <div className={styles.newsLink}>
+        <ModuleNewsList news={data.contents} />
+        <div className={styles.newsList}>
           <ModuleButtonLink href="/news">もっとみる</ModuleButtonLink>
         </div>
       </section>

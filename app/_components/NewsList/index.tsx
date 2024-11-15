@@ -10,7 +10,7 @@ type Props = {
   news: News[];
 };
 
-export default function ModuleNewsLink({ news }: Props) {
+export default function ModuleNewsList({ news }: Props) {
   if (news.length === 0) {
     return <p>記事がありません</p>;
   }
