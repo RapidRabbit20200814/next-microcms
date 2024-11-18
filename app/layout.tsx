@@ -1,4 +1,3 @@
-import { Module } from "module";
 import "./globals.css";
 import ModuleHeader from "@/app/_components/Header";
 import ModuleFooter from "@/app/_components/Footer";

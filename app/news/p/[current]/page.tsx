@@ -5,13 +5,14 @@ import { notFound } from "next/navigation";
 import { NEWS_LIST_LIMIT } from "@/app/_constants";
 
 type Props = {
-  params: {
+  params: Promise<{
     current: string;
-  };
+  }>;
 };
 
 export default async function Page({ params }: Props) {
-  const current = parseInt(params.current, 10);
+  const resolvedParams = await params;
+  const current = parseInt(resolvedParams.current, 10);
 
   if (Number.isNaN(current) || current < 1) {
     notFound();
