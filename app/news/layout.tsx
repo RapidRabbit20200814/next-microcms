@@ -5,6 +5,9 @@ type Props = {
   children: React.ReactNode;
 };
 
+// news以下すべてのページでISRを有効にする
+export const revalidate = 60;
+
 export default function NewsLayout({ children }: Props) {
   return (
     <>
