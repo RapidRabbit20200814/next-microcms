@@ -56,7 +56,7 @@ export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries
     queries,
     customRequestInit: {
       next: {
-        revalidate: queries?.draftKey === undefined ? 60 : 0,
+        revalidate: queries?.draftKey === undefined ? 60 : 0, // 本番環境では60秒、プレビュー環境では0秒
       },
     },
   });
